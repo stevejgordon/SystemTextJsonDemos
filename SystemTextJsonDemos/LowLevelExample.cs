@@ -2,15 +2,15 @@
 
 namespace SystemTextJsonDemos
 {
-    public static class MidLevelExample
+    public static class LowLevelExample
     {
         public static async Task RunAsync()
         {
             await using var stream = JsonStreamFactory.CreateGraphQlResponseStream();
 
-            var parser = new GraphQlResponseParser();
+            var parser = new LowLevelGraphQlResponseParser();
 
-            var user = await parser.ParseResponseJsonAsync(stream);
+            var user = parser.ParseResponseJsonWithoutPipeReader(stream);
         }
     }
 }

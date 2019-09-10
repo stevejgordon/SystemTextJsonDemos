@@ -7,7 +7,7 @@ namespace SystemTextJsonDemos
 {
     public class GraphQlResponseParser
     {
-        public async Task<UserDataModel> ParseResponseJson(Stream stream)
+        public async Task<UserDataModel> ParseResponseJsonAsync(Stream stream)
         {
             using var document = await JsonDocument.ParseAsync(stream);
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace SystemTextJsonDemos
 {
@@ -6,6 +7,8 @@ namespace SystemTextJsonDemos
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        [JsonPropertyName("createdTimeStamp")] 
         public DateTime CreatedOn { get; set; }
     }
 }
